@@ -2,7 +2,7 @@ package com.stream.teste;
 
 public class ObjetoTeste implements Stream {
 
-	char[] stringArray;
+	char[] stringArray = {};
 
 	int position = 0;
 
@@ -12,7 +12,9 @@ public class ObjetoTeste implements Stream {
 	 * @param array - {@link String} com os caracteres a serem verificados
 	 */
 	public ObjetoTeste(String array) {
-		stringArray = array.toCharArray();
+		if(array != null) {
+			stringArray = array.toCharArray();
+		}
 	}
 
 	/*

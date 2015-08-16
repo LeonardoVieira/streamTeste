@@ -25,4 +25,31 @@ public class StreamTest {
 		assertEquals('A', FindChar.firstChar(new ObjetoTeste("sdfghjklAsdfghjklasdfghjklpoipo")));
 		assertEquals('5', FindChar.firstChar(new ObjetoTeste("asdfghjkl56987asdfghjkl98746123")));
 	}
+
+	/**
+	 * Teste quando o array passado não possui character unico
+	 * quando não achar retorna @ 
+	 */
+	@Test
+	public void testFirstCharacterError() {
+		assertEquals('@', FindChar.firstChar(new ObjetoTeste("000aaaaaaaaaaaabbbbbbbbbbbccccc")));
+	}
+
+	/**
+	 * Teste quando o array passado for null
+	 * retorna @ 
+	 */
+	@Test
+	public void testFirstCharacterErrorNull() {
+		assertEquals('@', FindChar.firstChar(new ObjetoTeste(null)));
+	}
+
+	/**
+	 * Teste quando o array passado for null
+	 * retorna @ 
+	 */
+	@Test
+	public void testFirstCharacterErrorEmpty() {
+		assertEquals('@', FindChar.firstChar(new ObjetoTeste("")));
+	}
 }
