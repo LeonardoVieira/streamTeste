@@ -12,7 +12,7 @@ public interface Stream {
 	/**
 	 * Metodo responsavel por saber se existe um proximo char no array
 	 * 
-	 * @return	<b>true</b> - caso possua mais items no aray
+	 * @return	<b>true</b> - caso possua mais items no aray<br>
 	 *			<b>false</b> - caso não tenha mais nenhum item no array
 	 */
 	public boolean hasNext();

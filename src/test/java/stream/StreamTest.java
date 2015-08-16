@@ -7,6 +7,15 @@ import org.junit.Test;
 import com.stream.teste.FindChar;
 import com.stream.teste.ObjetoTeste;
 
+/**
+ * Testes unitários sobre a implementação realizada.
+ * efetua testes para sucesso (quando achar um character unico dentro do array)
+ * efetua teste para quando o objeto enviado para verificação for null ou branco ("")
+ * efetua testes em que não encontra um char unico 
+ * 
+ * @author Leonardo
+ *
+ */
 public class StreamTest {
 
 	/**
@@ -33,6 +42,9 @@ public class StreamTest {
 	@Test
 	public void testFirstCharacterError() {
 		assertEquals('@', FindChar.firstChar(new ObjetoTeste("000aaaaaaaaaaaabbbbbbbbbbbccccc")));
+		assertEquals('@', FindChar.firstChar(new ObjetoTeste("abcdefabcdefabcdefabcdefabcdefa")));
+		assertEquals('@', FindChar.firstChar(new ObjetoTeste("fghijklmfghijklmfghijklmfghijkl")));
+		assertEquals('@', FindChar.firstChar(new ObjetoTeste("1234567890123456789012345678901")));
 	}
 
 	/**

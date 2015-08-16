@@ -2,6 +2,14 @@ package com.stream.teste;
 
 import java.util.LinkedHashSet;
 
+/**
+ * Classe de implementação da verificação dos characteres
+ * possui apenas o metodo de verificar se no array possui 
+ * characteres unicos ou não
+ * 
+ * @author Leonardo
+ *
+ */
 public class FindChar {
 
 	/**
