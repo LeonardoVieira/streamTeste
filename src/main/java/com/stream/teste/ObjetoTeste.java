@@ -6,10 +6,19 @@ public class ObjetoTeste implements Stream {
 
 	int position = 0;
 
+	/**
+	 * Contrutor para popular o array de characteres
+	 * 
+	 * @param array - {@link String} com os caracteres a serem verificados
+	 */
 	public ObjetoTeste(String array) {
 		stringArray = array.toCharArray();
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see com.stream.teste.Stream#getNext()
+	 */
 	@Override
 	public char getNext() {
 		if(hasNext()) {
@@ -19,6 +28,10 @@ public class ObjetoTeste implements Stream {
 		return 0;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see com.stream.teste.Stream#hasNext()
+	 */
 	@Override
 	public boolean hasNext() {
 		return stringArray.length != position;
